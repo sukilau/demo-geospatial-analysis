@@ -9,7 +9,7 @@ from gmplot import gmplot
 
 
 HK_LOCATION = (22.396400, 114.10950)
-    
+
 def geomap(data, zoom=11, point_size=3, point_color='r', point_alpha=1, y=HK_LOCATION[0], x=HK_LOCATION[1]):
     '''
     plot point location on OSM map
@@ -52,6 +52,7 @@ def geomap(data, zoom=11, point_size=3, point_color='r', point_alpha=1, y=HK_LOC
     
 
 def osm_staticmap_api(x,y,z,size,filename) :
+    '''Use OMS staticmap API to get the base map'''
     static_map = "http://staticmap.openstreetmap.de/staticmap.php?center={0},{1}&zoom={2}&size={3}x{3}&maptype=mapnik".format(y,x,z,size)
     static_map_filename, headers = urllib.request.urlretrieve(static_map, filename)
     return static_map_filename
