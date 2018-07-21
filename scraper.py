@@ -69,25 +69,10 @@ def parse_geodata(df):
             df.district[i] = district
         except (RuntimeError, TypeError, NameError, KeyError):
             pass
-
-#         print(i, df.country[i], df.country_code[i], df.state[i], df.region[i], df.county[i], df.city[i], df.district[i]) 
+        
     return df
 
 df = pd.read_csv('data/data.csv')
 df = reverse_geocoder(df)
 df = parse_geodata(df)
 df.to_csv('data/geodata.csv', index=False)
-
-
-
-# d1 = date(2018,2,18)
-# d2 = date(2018,2,28)
-# dd = [str(d1 + timedelta(days=x)) for x in range((d2-d1).days + 1)]
-
-# for i in range(len(dd)):
-#     ddf = df[df.date==dd[i]].reset_index()
-#     print("======", dd[i], "Load data", ddf.shape)
-#     ddf = reverse_geocoder(ddf)
-#     ddf = parse_geodata(ddf)
-#     ddf.to_csv('data/geodata/geodata_'+str(dd[i])+'.csv', index=False)
-
