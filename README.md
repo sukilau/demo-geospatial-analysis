@@ -1,6 +1,8 @@
 # Geospatial Analysis
 
-This repo presents data visualization of gelocation data, geospatial analysis and clustering algorithm. For illustration purpose, all data presented in this repo are synthesized data only. For deployment, API is called to query data from Redshift database and conduct visualization of geolocation data at specific time point. See `demo-geospatial-analysis.ipynb`
+This repo presents data visualization of gelocation data, geospatial analysis and clustering algorithm. For illustration purpose, all data presented in this repo are synthesized data only. For deployment, API is called to query data from Redshift database and conduct visualization of geolocation data at specific time point. 
+
+See `demo-geospatial-analysis.ipynb` [Link](https://nbviewer.jupyter.org/github/sukilau/demo-geospatial-analysis/blob/master/demo-geospatial-analysis.ipynb.ipynb)
 
 
 ## Map Visualization of Geolocation Data
